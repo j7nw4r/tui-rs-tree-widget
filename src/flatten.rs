@@ -14,9 +14,8 @@ pub struct Flattened<'text, Identifier> {
     ///
     /// This field drives the indent guides. A level with a following sibling gets
     /// a continuing vertical line `│`. The deepest level gets a branch `├` or a
-    /// last-branch `└` connector. The field is crate-internal, so adding it does
-    /// not break the public [`Flattened`] surface.
-    pub(crate) has_next_sibling: Vec<bool>,
+    /// last-branch `└` connector.
+    pub has_next_sibling: Vec<bool>,
     pub item: &'text TreeItem<'text, Identifier>,
 }
 
